@@ -1,0 +1,191 @@
+/* Romeo With A Dumbbell — the noir face (Sin), from the app's colour assets. */
+
+@font-face {
+  font-family: "Fell";
+  src: url("/fonts/IMFellEnglishSC.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garamond";
+  src: url("/fonts/EBGaramond.woff2") format("woff2");
+  font-weight: 400 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Courier Prime";
+  src: url("/fonts/CourierPrime-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+  --pool: #14120E;
+  --stock: #000000;
+  --ink: #F2EDE4;
+  --muted: #B0A89C;
+  --rule: #5A5248;
+  --accent: #FF0000;
+  --link: #FF5A5A;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  background: var(--stock);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flow-root;
+  color: var(--ink);
+  background:
+    radial-gradient(ellipse 80% 55% at 50% 0%, #2A2620 0%, var(--pool) 45%, var(--stock) 100%) no-repeat,
+    var(--stock);
+  font: 400 1.1875rem/1.6 "Garamond", Georgia, "Times New Roman", serif;
+  font-variant-numeric: oldstyle-nums;
+}
+
+main, footer {
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--ink); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+h1, h2, h3, .masthead {
+  font-family: "Fell", Georgia, serif;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.masthead {
+  display: block;
+  padding-top: 18vh;
+  font-size: clamp(2.6rem, 11vw, 4.5rem);
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: var(--ink);
+  text-decoration: none;
+}
+.masthead-small {
+  display: block;
+  padding-top: 3rem;
+  font-size: 1.35rem;
+  text-align: center;
+  color: var(--muted);
+  text-decoration: none;
+  font-family: "Fell", Georgia, serif;
+}
+.masthead-small:hover { color: var(--ink); }
+
+.rule {
+  width: 4rem;
+  height: 1px;
+  margin: 1.75rem auto 2.5rem;
+  border: 0;
+  background: var(--accent);
+}
+
+.lede {
+  text-align: center;
+  color: var(--muted);
+  font-style: italic;
+  font-size: 1.25rem;
+  margin: 0 0 3.5rem;
+}
+
+.manifesto p { margin: 0 0 1.25em; }
+.manifesto p.turn {
+  text-align: center;
+  font-style: italic;
+  margin: 1.75em 0;
+}
+.manifesto p:last-child {
+  font-family: "Fell", Georgia, serif;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  text-align: center;
+  margin-top: 2em;
+}
+
+.facts {
+  margin: 4rem 0 0;
+  padding: 1.5rem 0 0;
+  border-top: 1px solid var(--rule);
+}
+.facts h2 { font-size: 1.5rem; margin: 0 0 1rem; text-align: center; }
+.facts ul { list-style: none; padding: 0; margin: 0; }
+.facts li { padding: 0.55rem 0; border-bottom: 1px solid var(--rule); }
+.facts li:last-child { border-bottom: 0; }
+
+.soon {
+  margin: 3rem 0 0;
+  text-align: center;
+  font-family: "Courier Prime", "Courier New", monospace;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* The legal pages */
+.doc h1 { font-size: clamp(2.1rem, 8vw, 3rem); text-align: center; margin: 1.5rem 0 0.5rem; }
+.dated {
+  text-align: center;
+  font-family: "Courier Prime", "Courier New", monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+.doc h2 {
+  font-size: 1.45rem;
+  margin: 2.75rem 0 0.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+}
+.doc h3 { font-size: 1.15rem; margin: 1.75rem 0 0.5rem; color: var(--ink); }
+.doc p, .doc li { hyphens: auto; -webkit-hyphens: auto; }
+.doc ul { padding-left: 1.2rem; }
+.doc li { margin: 0.35rem 0; }
+.doc li::marker { color: var(--accent); }
+.doc strong { font-weight: 600; }
+
+.short {
+  margin: 2.5rem 0 0;
+  padding: 1.25rem 1.25rem 0.5rem;
+  border: 1px solid var(--rule);
+  border-left: 2px solid var(--accent);
+  background: rgba(0, 0, 0, 0.35);
+}
+.short h2 { border: 0; padding: 0; margin: 0 0 0.5rem; font-size: 1.25rem; }
+.short ul { margin: 0 0 0.75rem; }
+
+table { width: 100%; border-collapse: collapse; font-size: 1rem; margin: 1rem 0; }
+th, td { text-align: left; vertical-align: top; padding: 0.5rem 0.5rem 0.5rem 0; border-bottom: 1px solid var(--rule); }
+th { font-family: "Fell", Georgia, serif; font-weight: 400; color: var(--muted); }
+.table-wrap { overflow-x: auto; }
+
+.caps {
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
+}
+
+footer {
+  margin-top: 5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 3rem;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+  color: var(--muted);
+  font-size: 1rem;
+}
+footer nav a { color: var(--muted); margin: 0 0.6rem; }
+footer nav a:hover { color: var(--ink); }
+footer p { margin: 0.75rem 0 0; font-size: 0.9rem; }
